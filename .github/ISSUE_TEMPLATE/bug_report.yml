@@ -1,0 +1,79 @@
+name: Bug report
+description: Something in one of the mods doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Fill in what you can; the log at the bottom helps the most.
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Which mod?
+      options:
+        - DeathRecap
+        - GroupBoard
+        - HerdBell
+        - IdleBeasts
+        - LoadBearing
+        - PackBeasts
+        - PenPosts
+        - RavenIsle
+        - ScissorLift
+        - TreeRibbons
+        - Tuneups
+        - WellStocked
+        - Ziplines
+        - Not sure / more than one
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Mod version
+      description: Shown next to the mod in your mod manager.
+      placeholder: "1.0.6"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What went wrong, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps, if you know them. "It happens every time I..." is fine.
+      placeholder: |
+        1. Tame a wolf
+        2. Put a saddle on it
+        3. ...
+  - type: dropdown
+    id: play
+    attributes:
+      label: How were you playing?
+      options:
+        - On my own
+        - Hosting a game for friends
+        - Joined someone else's game
+        - On a dedicated server
+  - type: input
+    id: profile
+    attributes:
+      label: Mod list (optional)
+      description: In Gale or r2modman you can export your profile as a code; paste it here so the same mods can be tried.
+  - type: textarea
+    id: log
+    attributes:
+      label: Log file
+      description: |
+        Drag your **LogOutput.log** into this box. It's in your mod manager's profile folder, under BepInEx.
+        Send it before you start the game again, because each start writes a new one.
+  - type: textarea
+    id: pictures
+    attributes:
+      label: Screenshots or video (optional)
+      description: Drag them in here.
